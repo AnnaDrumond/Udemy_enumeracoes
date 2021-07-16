@@ -16,12 +16,14 @@ https://www.devmedia.com.br/tipos-enum-no-java/25729
 • Vantagem: melhor semântica, código mais legível e auxiliado pelo 
 compilador
 
-Cada declaração enum declara uma classe enum com 
-as seguintes restrições:
-1. constantes enum são implicitamente final.
-2. constantes enum são implicitamente static.
-3. Qualquer tentativa de criar um objeto de um tipo enum com um operador new resulta em um erro de compilação.
-
 Como classes, todos os tipos enum são tipos por referência.
 
 Em uma declaração enum, é um erro de sintaxe declarar constantes enum após construtores, campos e métodos do tipo enum.
+
+As instâncias dos tipos enum são criadas e nomeadas junto com a declaração da classe, sendo fixas e imutáveis (o valor é fixo).;
+Não é permitido criar novas instâncias com a palavra chave new;
+O construtor é declarado private, embora não precise de modificador private explícito;
+
+Seguindo a convenção, por serem objetos constantes e imutáveis (static final), os nomes declarados recebem todas as letras em MAIÚSCULAS;
+As instâncias dos tipos enum devem obrigatoriamente ter apenas um nome;
+Opcionalmente, a declaração da classe pode incluir variáveis de instância, construtor, métodos de instância, de classe, etc.
