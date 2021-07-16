@@ -7,3 +7,13 @@ Enumerações
 
 • Vantagem: melhor semântica, código mais legível e auxiliado pelo 
 compilador
+
+Cada declaração enum declara uma classe enum com 
+as seguintes restrições:
+1. constantes enum são implicitamente final.
+2. constantes enum são implicitamente static.
+3. Qualquer tentativa de criar um objeto de um tipo enum com um operador new resulta em um erro de compilação.
+
+Como classes, todos os tipos enum são tipos por referência.
+
+Em uma declaração enum, é um erro de sintaxe declarar constantes enum após construtores, campos e métodos do tipo enum.
